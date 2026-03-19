@@ -14,6 +14,7 @@ public class UsuarioService {
         return usuarioRepository.salvar(usuario);
     }
 
+    
     public Usuario buscarPorId(int id) {
         Usuario user = usuarioRepository.buscarPorId(id);
         if (user == null) throw new RuntimeException("Usuário não encontrado.");
