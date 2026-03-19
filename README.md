@@ -240,12 +240,12 @@ Comece pelos repositories, usando `HashMap<Integer, Objeto>` para armazenar dado
 
 **LivroRepository.java**
 - Crie um `static Map<Integer, Livro> banco = new HashMap<>()`
-- `salvar()`: adicionar ao mapa
-- `buscarPorId()`: recuperar do mapa
+- `salvar()`: adicionar ao lista
+- `buscarPorId()`: recuperar do lista
 - `buscarPorNome()`: iterar e comparar (case-insensitive)
-- `listarTodos()`: retornar nova lista dos valores
-- `atualizar()`: atualizar no mapa
-- `deletar()`: remover do mapa
+- `listarTodos()`: retornar lista com os objetos
+- `atualizar()`: atualizar no lista
+- `deletar()`: remover do lista
 
 **UsuarioRepository.java**
 - Similar ao LivroRepository
@@ -317,7 +317,7 @@ Controllers são simples - apenas delegam para o service:
 
 ## ⚠️ Dicas Importantes
 
-1. **Use HashMap com chave inteira**: A persistência é em memória, use `Map<Integer, Objeto>`
+1. **Use List**: A persistência é em memória, use `List<Objeto>`
 2. **ID única**: Use um contador estático em EmprestimoService para gerar IDs únicos
 3. **Coloque try-catch em Main.java**: As validações vão lançar exceções se dados inválidos
 4. **LocalDate.now()**: Use para pegar data/hora atual em empréstimos
