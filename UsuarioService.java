@@ -7,6 +7,7 @@ public class UsuarioService {
         this.usuarioRepository = usuarioRepository;
     }
 
+    
     public Usuario cadastrar(Usuario usuario) {
         if (usuario.getCpf() == null || usuario.getEmail() == null) {
             throw new RuntimeException("CPF e Email são obrigatórios para o cadastro.");
@@ -14,7 +15,7 @@ public class UsuarioService {
         return usuarioRepository.salvar(usuario);
     }
 
-    
+
     public Usuario buscarPorId(int id) {
         Usuario user = usuarioRepository.buscarPorId(id);
         if (user == null) throw new RuntimeException("Usuário não encontrado.");

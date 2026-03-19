@@ -7,6 +7,7 @@ public class EmprestimoService {
     private LivroRepository livroRepository;
     private static int proximoId = 1;
 
+    
     public EmprestimoService(EmprestimoRepository emprestimoRepository, 
                             UsuarioRepository usuarioRepository, 
                             LivroRepository livroRepository) {

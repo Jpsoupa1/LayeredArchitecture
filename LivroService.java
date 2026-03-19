@@ -7,6 +7,7 @@ public class LivroService {
         this.livroRepository = livroRepository;
     }
 
+    
     public Livro cadastrar(Livro livro) {
         if (livro.getNome() == null || livro.getNome().isEmpty()) {
             throw new RuntimeException("Nome do livro é obrigatório.");
