@@ -2,17 +2,19 @@ public class Livro {
     private int id;
     private String nome;
     private String autor;
-    private int edicao;
+    private double edicao;
     private int quantidade;
+    private boolean emprestado;
 
     public Livro() {
     }
 
-    public Livro(int id, String nome, String autor, int edicao, int quantidade) {
-        this.id = id;
-        this.nome = nome;
+    public Livro(String autor, double edicao, boolean emprestado, int id, String nome, int quantidade) {
         this.autor = autor;
         this.edicao = edicao;
+        this.emprestado = emprestado;
+        this.id = id;
+        this.nome = nome;
         this.quantidade = quantidade;
     }
 
@@ -65,5 +67,13 @@ public class Livro {
                 ", edicao=" + edicao +
                 ", quantidade=" + quantidade +
                 '}';
+    }
+
+    public boolean isEmprestado() {
+        return emprestado;
+    }
+
+    public void setEmprestado(boolean emprestado) {
+        this.emprestado = emprestado;
     }
 }

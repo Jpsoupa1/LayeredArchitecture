@@ -3,41 +3,32 @@ import java.util.List;
 public class UsuarioService {
     private UsuarioRepository usuarioRepository;
 
-    public UsuarioService() {
-        this.usuarioRepository = new UsuarioRepository();
-    }
-
     public UsuarioService(UsuarioRepository usuarioRepository) {
         this.usuarioRepository = usuarioRepository;
     }
 
     public Usuario cadastrar(Usuario usuario) {
-        return null;
+        if (usuario.getCpf() == null || usuario.getEmail() == null) {
+            throw new RuntimeException("CPF e Email são obrigatórios para o cadastro.");
+        }
+        return usuarioRepository.salvar(usuario);
     }
 
     public Usuario buscarPorId(int id) {
-        return null;
-    }
-
-    public Usuario buscarPorCpf(String cpf) {
-        return null;
-    }
-
-    public Usuario buscarPorEmail(String email) {
-        return null;
-    }
-
-    public List<Usuario> buscarPorNome(String nome) {
-        return null;
+        Usuario user = usuarioRepository.buscarPorId(id);
+        if (user == null) throw new RuntimeException("Usuário não encontrado.");
+        return user;
     }
 
     public List<Usuario> listarTodos() {
-        return null;
+        return usuarioRepository.listarTodos();
     }
 
     public void alterar(Usuario usuario) {
+        usuarioRepository.atualizar(usuario);
     }
 
     public void remover(int id) {
+        usuarioRepository.deletar(id);
     }
 }
