@@ -1,34 +1,29 @@
 import java.util.List;
 
 public class LivroController {
-    private LivroService livroService;
-
-    public LivroController() {
-        this.livroService = new LivroService();
-    }
+    private final LivroService livroService;
 
     public LivroController(LivroService livroService) {
         this.livroService = livroService;
     }
     
     public void cadastrar(Livro livro) {
+        livroService.cadastrar(livro);
     }
 
     public Livro buscarPorId(int id) {
-        return null;
-    }
-
-    public List<Livro> buscarPorNome(String nome) {
-        return null;
+        return livroService.buscarPorId(id);
     }
 
     public List<Livro> listarTodos() {
-        return null;
+        return livroService.listarTodos();
     }
 
     public void alterar(Livro livro) {
+        livroService.alterar(livro);
     }
 
     public void remover(int id) {
+        livroService.remover(id);
     }
 }

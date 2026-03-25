@@ -27,7 +27,7 @@ public class LivroRepository {
 
     public List<Livro> buscarPorNome(String nome) {
         return biblioteca.stream()
-                .filter(l -> l.getTitulo().toLowerCase().contains(nome.toLowerCase()))
+                .filter(l -> l.getNome().toLowerCase().contains(nome.toLowerCase()))
                 .collect(Collectors.toList());
     }
 
