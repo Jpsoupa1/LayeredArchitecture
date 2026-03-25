@@ -22,6 +22,7 @@ public class LivroRepository {
                 .filter(l -> l.getId() == id)
                 .findFirst()
                 .orElse(null);
+        
     }
 
     public List<Livro> buscarPorNome(String nome) {
