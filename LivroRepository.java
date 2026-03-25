@@ -43,6 +43,7 @@ public class LivroRepository {
         }
     }
 
+    
     public void deletar(int id) {
         biblioteca.removeIf(l -> l.getId() == id);
     }
