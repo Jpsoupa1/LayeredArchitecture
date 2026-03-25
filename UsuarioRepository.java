@@ -57,7 +57,6 @@ public class UsuarioRepository {
         }
     }
 
-    
     public void deletar(int id) {
         usuarios.removeIf(u -> u.getId() == id);
     }

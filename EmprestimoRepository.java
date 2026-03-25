@@ -55,7 +55,6 @@ public class EmprestimoRepository {
             }
         }
     }
-
     
     public void deletar(int id) {
         baseDeDados.removeIf(e -> e.getId() == id);
