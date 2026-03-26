@@ -1,0 +1,26 @@
+📘 LayeredArchitecture
+📌 Descrição
+
+Projeto que utiliza o padrão Layered Architecture (Arquitetura em Camadas) para organizar o código em partes com responsabilidades separadas.
+
+🧱 Camadas
+Controller (Apresentação)
+Recebe as requisições e retorna respostas.
+Service (Negócio)
+Contém as regras de negócio da aplicação.
+Repository (Dados)
+Faz o acesso e manipulação dos dados.
+🔄 Fluxo
+Controller → Service → Repository → Banco de Dados
+📁 Estrutura
+src/
+├── controller/
+├── service/
+├── repository/
+├── domain/
+▶️ Como executar
+git clone https://github.com/Jpsoupa1/LayeredArchitecture.git
+cd LayeredArchitecture
+# executar conforme a tecnologia do projeto
+✅ Vantagem
+Código organizado e fácil de manter
